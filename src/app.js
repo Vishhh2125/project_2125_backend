@@ -4,9 +4,13 @@ import cookieParser from "cookie-parser"
 
 const app = express()
 
+
 app.use(cors({
-    origin: "https://project-2125-frontend-n0gqjx812-vishhh2125s-projects.vercel.app", // <-- your frontend URL
-    credentials: true
+  origin: [
+    "http://localhost:5173",
+    "https://project-2125-frontend-n0gqjx812-vishhh2125s-projects.vercel.app"
+  ],
+  credentials: true
 }));
 
 app.use(express.json())
